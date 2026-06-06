@@ -12,7 +12,18 @@
     "slug": "io.dual.examples.property.production.v1",
     "name": "DUAL Property Token Production v1",
     "description": "Production property objects for the official DUAL Real Estate Tokenisation example.",
-    "actions": ["list", "offer", "sell", "transfer", "claim_yield", "distribute"]
+    "actions": [
+      "list",
+      "offer",
+      "sell",
+      "transfer",
+      "claim_yield",
+      "distribute"
+    ],
+    "id": "6a23ac65e50cc49e61b04c0e",
+    "live": true,
+    "readbackVerified": true,
+    "mintedAt": "2026-06-06T05:13:14.222Z"
   },
   "objects": [
     {
@@ -20,7 +31,9 @@
       "metadata": {
         "name": "Sydney Harbour Cove Estate",
         "description": "Waterfront estate tokenised for fractional real estate proof.",
-        "image": { "url": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80" }
+        "image": {
+          "url": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80"
+        }
       },
       "custom": {
         "name": "Sydney Harbour Cove Estate",
@@ -38,7 +51,13 @@
         "annualYield": 3.2,
         "minimumInvestment": 400,
         "description": "Waterfront estate with harbour views, deep-water jetty, and tokenised ownership register prepared for DUAL mainnet.",
-        "features": ["harbour views", "deep-water jetty", "infinity pool", "guest pavilion", "audited title pack"],
+        "features": [
+          "harbour views",
+          "deep-water jetty",
+          "infinity pool",
+          "guest pavilion",
+          "audited title pack"
+        ],
         "financials": {
           "monthlyRentalIncome": 165000,
           "annualExpenses": 380000,
@@ -49,6 +68,14 @@
         "imageUrl": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80",
         "liveContentId": "dual-property-sydney-harbour-cove-estate",
         "contentVersion": "2026-06-mainnet-content-v1"
+      },
+      "dual": {
+        "templateId": "6a23ac65e50cc49e61b04c0e",
+        "objectId": "6a23ac66e50cc49e61b04c10",
+        "stateHash": "0xa548486069671f1901323347dd748017930b4f57451acf0df9edc4860617ba48",
+        "integrityHash": "0x3fb2953fdcaeb87e3b5a488582a03fd4f2d37a516676550c185f6e0005a5c36f",
+        "readbackVerified": true,
+        "mintedAt": "2026-06-06T05:13:14.222Z"
       }
     },
     {
@@ -56,7 +83,9 @@
       "metadata": {
         "name": "Dubai Marina Skyreach Tower",
         "description": "Commercial tower tokenised with yield and ownership lifecycle proof.",
-        "image": { "url": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80" }
+        "image": {
+          "url": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80"
+        }
       },
       "custom": {
         "name": "Dubai Marina Skyreach Tower",
@@ -74,7 +103,13 @@
         "annualYield": 7.5,
         "minimumInvestment": 1000,
         "description": "LEED Platinum commercial tower with metro link, tenant covenant data, and yield distribution receipts prepared for DUAL mainnet.",
-        "features": ["LEED Platinum", "metro link", "smart building AI", "tenant covenant pack", "yield receipts"],
+        "features": [
+          "LEED Platinum",
+          "metro link",
+          "smart building AI",
+          "tenant covenant pack",
+          "yield receipts"
+        ],
         "financials": {
           "monthlyRentalIncome": 1250000,
           "annualExpenses": 3200000,
@@ -85,6 +120,14 @@
         "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80",
         "liveContentId": "dual-property-dubai-marina-skyreach",
         "contentVersion": "2026-06-mainnet-content-v1"
+      },
+      "dual": {
+        "templateId": "6a23ac65e50cc49e61b04c0e",
+        "objectId": "6a23ac68e50cc49e61b04c16",
+        "stateHash": "0xdaa6076d56d8bc49039492d6877000bed09bc42dc9e06a84d329f4cb96fb9fc7",
+        "integrityHash": "0x9013fedb074d69fbc83b75283af221d7e43c75d64261a58cd46f2aa57e837ddd",
+        "readbackVerified": true,
+        "mintedAt": "2026-06-06T05:13:14.222Z"
       }
     },
     {
@@ -92,7 +135,9 @@
       "metadata": {
         "name": "Tokyo Shibuya Nexus",
         "description": "Mixed-use commercial property with lifecycle proof and transfer controls.",
-        "image": { "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" }
+        "image": {
+          "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80"
+        }
       },
       "custom": {
         "name": "Tokyo Shibuya Nexus",
@@ -110,7 +155,13 @@
         "annualYield": 5.1,
         "minimumInvestment": 750,
         "description": "Seismically isolated mixed-use property with direct station link and DUAL-ready ownership transfer evidence.",
-        "features": ["seismic isolation", "station link", "anchor tenant", "occupancy proof", "transfer controls"],
+        "features": [
+          "seismic isolation",
+          "station link",
+          "anchor tenant",
+          "occupancy proof",
+          "transfer controls"
+        ],
         "financials": {
           "monthlyRentalIncome": 480000,
           "annualExpenses": 1100000,
@@ -121,6 +172,14 @@
         "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80",
         "liveContentId": "dual-property-tokyo-shibuya-nexus",
         "contentVersion": "2026-06-mainnet-content-v1"
+      },
+      "dual": {
+        "templateId": "6a23ac65e50cc49e61b04c0e",
+        "objectId": "6a23ac69e50cc49e61b04c1c",
+        "stateHash": "0xb4e1ac04d674e10f8a1120fecaba7ccf0f35672cdca8aca60661003a4a850f64",
+        "integrityHash": "0xe133bb77d19347daea6bd55d9f29e019a4b6df2b1eab73bd39b85e7bfc35b04d",
+        "readbackVerified": true,
+        "mintedAt": "2026-06-06T05:13:14.222Z"
       }
     }
   ]
