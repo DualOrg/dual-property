@@ -297,7 +297,7 @@ export default function TradePage() {
                 <div className="bg-white/[0.02] rounded-lg p-4 space-y-2 text-xs">
                   <div className="flex justify-between">
                     <span className="text-white/50">Transaction:</span>
-                    <a href="https://32f.blockv.io" target="_blank" rel="noopener noreferrer" className="text-[#c9a84c] hover:text-white transition-colors flex items-center gap-1">
+                    <a href="https://blockscout.dual.network" target="_blank" rel="noopener noreferrer" className="text-[#c9a84c] hover:text-white transition-colors flex items-center gap-1">
                       View on Blockscout<span className="material-symbols-outlined text-xs">open_in_new</span>
                     </a>
                   </div>

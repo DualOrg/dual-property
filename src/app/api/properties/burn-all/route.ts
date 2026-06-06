@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'ids array is required' }, { status: 400 });
   }
 
-  const BASE = process.env.NEXT_PUBLIC_DUAL_API_URL || 'https://gateway-48587430648.europe-west6.run.app';
+  const BASE = process.env.NEXT_PUBLIC_DUAL_API_URL || 'https://api.dual.network/';
   const results: any[] = [];
 
   for (const id of ids) {

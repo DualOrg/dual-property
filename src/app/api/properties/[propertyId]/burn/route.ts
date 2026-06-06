@@ -18,7 +18,7 @@ export async function DELETE(
     return NextResponse.json({ error: 'Not authenticated. Login via OTP first.' }, { status: 401 });
   }
 
-  const BASE = process.env.NEXT_PUBLIC_DUAL_API_URL || 'https://gateway-48587430648.europe-west6.run.app';
+  const BASE = process.env.NEXT_PUBLIC_DUAL_API_URL || 'https://api.dual.network/';
 
   try {
     // Burn requires Bearer JWT from the token owner — send directly

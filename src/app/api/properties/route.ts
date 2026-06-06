@@ -6,7 +6,7 @@ import { getOrgToken, dualFetch } from "@/lib/get-org-token";
 export const dynamic = "force-dynamic";
 
 // Known fallback values (discovered during initial setup)
-const FALLBACK_TEMPLATE_ID = '69c057ffee7cf8d3342efec4';
+const FALLBACK_TEMPLATE_ID = '';
 
 // Map seed/data-provider properties (old propertyData format) to gateway format
 function mapSeedProperties(seeds: any[]): any[] {
@@ -188,7 +188,7 @@ export async function POST(req: NextRequest) {
       if (rawToken) {
         const { DualClient } = await import('@/lib/dual-sdk');
         client = new DualClient({
-          baseUrl: process.env.NEXT_PUBLIC_DUAL_API_URL || 'https://gateway-48587430648.europe-west6.run.app',
+          baseUrl: process.env.NEXT_PUBLIC_DUAL_API_URL || 'https://api.dual.network/',
           token: rawToken,
           apiKey: process.env.DUAL_API_KEY || '',
           timeout: 30000,
@@ -211,7 +211,7 @@ export async function POST(req: NextRequest) {
 
     // Auto-discover or create a template if none is configured
     if (!templateId) {
-      const BASE = process.env.NEXT_PUBLIC_DUAL_API_URL || 'https://gateway-48587430648.europe-west6.run.app';
+      const BASE = process.env.NEXT_PUBLIC_DUAL_API_URL || 'https://api.dual.network/';
       const token = rawToken || (client as any)?.http?.getToken?.() || '';
       const authHeaders: Record<string, string> = {
         'Content-Type': 'application/json',

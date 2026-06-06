@@ -9,8 +9,8 @@
  */
 import { DualClient } from './dual-sdk';
 
-const BASE_URL = process.env.NEXT_PUBLIC_DUAL_API_URL || 'https://gateway-48587430648.europe-west6.run.app';
-const ORG_ID = process.env.DUAL_ORG_ID || '69b935b4187e903f826bbe71';
+const BASE_URL = process.env.NEXT_PUBLIC_DUAL_API_URL || 'https://api.dual.network/';
+const ORG_ID = process.env.DUAL_ORG_ID || '6a1a927534603174374c8ecf';
 const API_KEY = process.env.DUAL_API_KEY || '';
 
 // ─── JWT Token Cache ───

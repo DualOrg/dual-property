@@ -23,7 +23,7 @@ import { v4 as uuidv4 } from "uuid";
 // ─── Blockscout Resolver ───
 // Matches DUAL objects to on-chain token instances via integrity_hash
 const DUAL_CONTRACT = '0x41Cf00E593c5623B00F812bC70Ee1A737C5aFF06';
-const BLOCKSCOUT_BASE = 'https://32f.blockv.io';
+const BLOCKSCOUT_BASE = process.env.NEXT_PUBLIC_DUAL_L2_EXPLORER_BASE_URL || 'https://blockscout.dual.network';
 
 interface BlockscoutLinks {
   txHash: string | null;
@@ -429,10 +429,10 @@ function mapGatewayToWine(obj: any): Wine {
     updatedAt: obj.when_modified || new Date().toISOString(),
     blockchainTxHash: obj.integrity_hash,
     explorerLinks: {
-      owner: obj.owner ? `https://32f.blockv.io/address/${obj.owner}` : null,
+      owner: obj.owner ? `https://blockscout.dual.network/address/${obj.owner}` : null,
       contentHash: null,
       integrityHash: null,
-      org: obj.org_id ? `https://32f.blockv.io/address/0xed75538AeDD6E45FfadF30B9EEC68A3959654bF9` : null,
+      org: obj.org_id ? `https://blockscout.dual.network/address/0xed75538AeDD6E45FfadF30B9EEC68A3959654bF9` : null,
     },
   };
 }
@@ -766,7 +766,7 @@ class DualDataProvider implements DataProvider {
   async listProperties(): Promise<Property[]> {
     try {
       const client = getDualClient();
-      const templateId = process.env.DUAL_PROPERTIES_TEMPLATE_ID || '69c057ffee7cf8d3342efec4';
+      const templateId = process.env.DUAL_PROPERTIES_TEMPLATE_ID || process.env.DUAL_TEMPLATE_ID || '';
       const params: any = { limit: 100 };
       if (templateId) params.template_id = templateId;
       const response = await client.objects.listObjects(params);

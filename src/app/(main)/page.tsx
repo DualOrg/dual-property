@@ -73,7 +73,7 @@ export default function PropertiesPage() {
             isLive: true,
             blockchainTxHash: p.blockchainTxHash,
             explorerUrl: p.blockchainTxHash
-              ? `https://32f.blockv.io/token/0x41Cf00E593c5623B00F812bC70Ee1A737C5aFF06`
+              ? `https://blockscout.dual.network/token/0x41Cf00E593c5623B00F812bC70Ee1A737C5aFF06`
               : undefined,
             createdAt: p.createdAt,
           };
@@ -179,7 +179,7 @@ export default function PropertiesPage() {
               </span>
             )}
             <a
-              href="https://32f.blockv.io/token/0x41Cf00E593c5623B00F812bC70Ee1A737C5aFF06"
+              href="https://blockscout.dual.network/token/0x41Cf00E593c5623B00F812bC70Ee1A737C5aFF06"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-auto text-sm text-[#c9a84c] hover:text-white transition-colors flex items-center gap-1"

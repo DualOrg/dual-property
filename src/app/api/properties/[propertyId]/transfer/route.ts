@@ -58,7 +58,7 @@ export async function POST(req: NextRequest, { params }: { params: { propertyId:
     }
 
     // Otherwise, mint a transfer-intent receipt (email-based transfer needs off-chain resolution)
-    const FALLBACK_TEMPLATE_ID = '69c057ffee7cf8d3342efec4';
+    const FALLBACK_TEMPLATE_ID = '';
     const templateId = process.env.DUAL_PROPERTIES_TEMPLATE_ID || FALLBACK_TEMPLATE_ID;
 
     // Get property name

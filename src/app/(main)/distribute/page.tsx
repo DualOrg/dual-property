@@ -302,7 +302,7 @@ function DistributeContent() {
                         <td className="py-4 px-6 text-right font-semibold text-[#c9a84c]">{log.amount}</td>
                         <td className="py-4 px-6"><span className="px-2 py-0.5 bg-[#10b981]/20 text-[#10b981] text-xs font-semibold rounded-full">{log.status}</span></td>
                         <td className="py-4 px-6 text-white/60 font-mono text-xs">
-                          <a href={`https://32f.blockv.io/tx/${log.hash}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#c9a84c] transition-colors">
+                          <a href={`https://blockscout.dual.network/tx/${log.hash}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#c9a84c] transition-colors">
                             {log.hash?.slice(0, 12)}...
                           </a>
                         </td>

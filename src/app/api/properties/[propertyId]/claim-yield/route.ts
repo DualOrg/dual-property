@@ -3,7 +3,7 @@ import { getOrgToken, dualFetch } from "@/lib/get-org-token";
 
 export const dynamic = "force-dynamic";
 
-const FALLBACK_TEMPLATE_ID = '69c057ffee7cf8d3342efec4';
+const FALLBACK_TEMPLATE_ID = '';
 
 /**
  * POST /api/properties/:propertyId/claim-yield

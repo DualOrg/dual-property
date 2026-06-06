@@ -10,9 +10,9 @@
 
 import { NextRequest } from 'next/server';
 
-const FALLBACK_ORG_ID = '69b935b4187e903f826bbe71';
+const FALLBACK_ORG_ID = '6a1a927534603174374c8ecf';
 const BASE_URL = () =>
-  process.env.NEXT_PUBLIC_DUAL_API_URL || 'https://gateway-48587430648.europe-west6.run.app';
+  process.env.NEXT_PUBLIC_DUAL_API_URL || 'https://api.dual.network/';
 
 /**
  * Parse JWT payload and check if expired.
