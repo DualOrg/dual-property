@@ -1,0 +1,127 @@
+{
+  "app": "dual-property",
+  "version": "2026-06-mainnet-content-v1",
+  "updatedAt": "2026-06-06T00:00:00.000Z",
+  "network": {
+    "target": "mainnet",
+    "apiUrl": "https://api.dual.network/",
+    "orgId": "6a1a927534603174374c8ecf"
+  },
+  "template": {
+    "env": "DUAL_PROPERTIES_TEMPLATE_ID",
+    "slug": "io.dual.examples.property.production.v1",
+    "name": "DUAL Property Token Production v1",
+    "description": "Production property objects for the official DUAL Real Estate Tokenisation example.",
+    "actions": ["list", "offer", "sell", "transfer", "claim_yield", "distribute"]
+  },
+  "objects": [
+    {
+      "contentId": "dual-property-sydney-harbour-cove-estate",
+      "metadata": {
+        "name": "Sydney Harbour Cove Estate",
+        "description": "Waterfront estate tokenised for fractional real estate proof.",
+        "image": { "url": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80" }
+      },
+      "custom": {
+        "name": "Sydney Harbour Cove Estate",
+        "address": "8 Wunulla Road Point Piper",
+        "city": "Sydney",
+        "country": "Australia",
+        "propertyType": "residential",
+        "yearBuilt": 2019,
+        "totalSqft": 12000,
+        "units": 1,
+        "totalValue": 62000000,
+        "tokenPrice": 400,
+        "totalTokens": 155000,
+        "tokensSold": 32500,
+        "annualYield": 3.2,
+        "minimumInvestment": 400,
+        "description": "Waterfront estate with harbour views, deep-water jetty, and tokenised ownership register prepared for DUAL mainnet.",
+        "features": ["harbour views", "deep-water jetty", "infinity pool", "guest pavilion", "audited title pack"],
+        "financials": {
+          "monthlyRentalIncome": 165000,
+          "annualExpenses": 380000,
+          "netOperatingIncome": 1600000,
+          "capRate": 2.6,
+          "projectedAppreciation": 6.1
+        },
+        "imageUrl": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80",
+        "liveContentId": "dual-property-sydney-harbour-cove-estate",
+        "contentVersion": "2026-06-mainnet-content-v1"
+      }
+    },
+    {
+      "contentId": "dual-property-dubai-marina-skyreach",
+      "metadata": {
+        "name": "Dubai Marina Skyreach Tower",
+        "description": "Commercial tower tokenised with yield and ownership lifecycle proof.",
+        "image": { "url": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80" }
+      },
+      "custom": {
+        "name": "Dubai Marina Skyreach Tower",
+        "address": "Plot JBR-7 Marina Promenade",
+        "city": "Dubai",
+        "country": "UAE",
+        "propertyType": "commercial",
+        "yearBuilt": 2024,
+        "totalSqft": 320000,
+        "units": 1,
+        "totalValue": 180000000,
+        "tokenPrice": 1000,
+        "totalTokens": 180000,
+        "tokensSold": 81000,
+        "annualYield": 7.5,
+        "minimumInvestment": 1000,
+        "description": "LEED Platinum commercial tower with metro link, tenant covenant data, and yield distribution receipts prepared for DUAL mainnet.",
+        "features": ["LEED Platinum", "metro link", "smart building AI", "tenant covenant pack", "yield receipts"],
+        "financials": {
+          "monthlyRentalIncome": 1250000,
+          "annualExpenses": 3200000,
+          "netOperatingIncome": 11800000,
+          "capRate": 6.6,
+          "projectedAppreciation": 8.2
+        },
+        "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80",
+        "liveContentId": "dual-property-dubai-marina-skyreach",
+        "contentVersion": "2026-06-mainnet-content-v1"
+      }
+    },
+    {
+      "contentId": "dual-property-tokyo-shibuya-nexus",
+      "metadata": {
+        "name": "Tokyo Shibuya Nexus",
+        "description": "Mixed-use commercial property with lifecycle proof and transfer controls.",
+        "image": { "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" }
+      },
+      "custom": {
+        "name": "Tokyo Shibuya Nexus",
+        "address": "2-24-12 Shibuya",
+        "city": "Tokyo",
+        "country": "Japan",
+        "propertyType": "mixed-use",
+        "yearBuilt": 2023,
+        "totalSqft": 185000,
+        "units": 1,
+        "totalValue": 95000000,
+        "tokenPrice": 750,
+        "totalTokens": 126667,
+        "tokensSold": 47750,
+        "annualYield": 5.1,
+        "minimumInvestment": 750,
+        "description": "Seismically isolated mixed-use property with direct station link and DUAL-ready ownership transfer evidence.",
+        "features": ["seismic isolation", "station link", "anchor tenant", "occupancy proof", "transfer controls"],
+        "financials": {
+          "monthlyRentalIncome": 480000,
+          "annualExpenses": 1100000,
+          "netOperatingIncome": 4660000,
+          "capRate": 4.9,
+          "projectedAppreciation": 3.5
+        },
+        "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80",
+        "liveContentId": "dual-property-tokyo-shibuya-nexus",
+        "contentVersion": "2026-06-mainnet-content-v1"
+      }
+    }
+  ]
+}

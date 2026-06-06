@@ -18,6 +18,7 @@ import type {
   PropertyType,
 } from "@/types/dual";
 import { isDualConfigured, getDualClient } from "./dual-client";
+import { getProductionProperties } from "./production-content";
 import { v4 as uuidv4 } from "uuid";
 
 // ─── Blockscout Resolver ───
@@ -764,6 +765,11 @@ class DualDataProvider implements DataProvider {
   }
 
   async listProperties(): Promise<Property[]> {
+    const fallbackProperties = getProductionProperties();
+    if (!isDualConfigured() || !(process.env.DUAL_PROPERTIES_TEMPLATE_ID || process.env.DUAL_TEMPLATE_ID)) {
+      return fallbackProperties;
+    }
+
     try {
       const client = getDualClient();
       const templateId = process.env.DUAL_PROPERTIES_TEMPLATE_ID || process.env.DUAL_TEMPLATE_ID || '';
@@ -775,7 +781,7 @@ class DualDataProvider implements DataProvider {
 
       // Fallback to seed properties if DUAL returns empty results
       if (properties.length === 0) {
-        return SEED_PROPERTIES;
+        return fallbackProperties;
       }
 
       // Resolve Blockscout links for properties
@@ -801,17 +807,22 @@ class DualDataProvider implements DataProvider {
       return properties;
     } catch (err) {
       console.error('Failed to list properties:', err);
-      return SEED_PROPERTIES;
+      return fallbackProperties.length > 0 ? fallbackProperties : SEED_PROPERTIES;
     }
   }
 
   async getProperty(id: string): Promise<Property | null> {
+    const fallback = getProductionProperties().find((property) => property.id === id || property.objectId === id);
+    if (!isDualConfigured() || !(process.env.DUAL_PROPERTIES_TEMPLATE_ID || process.env.DUAL_TEMPLATE_ID)) {
+      return fallback || null;
+    }
+
     try {
       const client = getDualClient();
       const obj = await client.objects.getObject(id);
       if (!obj) {
         // Fallback to seed property if DUAL returns null
-        return SEED_PROPERTIES.find(p => p.id === id) || null;
+        return fallback || SEED_PROPERTIES.find(p => p.id === id) || null;
       }
       const property = mapGatewayToProperty(obj);
       // Resolve Blockscout links
@@ -833,7 +844,7 @@ class DualDataProvider implements DataProvider {
       return property;
     } catch {
       // Fallback to seed property on error
-      return SEED_PROPERTIES.find(p => p.id === id) || null;
+      return fallback || SEED_PROPERTIES.find(p => p.id === id) || null;
     }
   }
 }

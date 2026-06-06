@@ -81,7 +81,7 @@ export async function GET(req: NextRequest) {
       console.warn('No valid JWT available, falling back to data provider');
       const provider = getDataProvider();
       const properties = await provider.listProperties();
-      return NextResponse.json({ properties });
+      return NextResponse.json({ properties: mapSeedProperties(properties) });
     }
 
     // Direct HTTP call to DUAL gateway with org-scoped JWT
@@ -92,7 +92,7 @@ export async function GET(req: NextRequest) {
       console.warn(`Direct objects fetch failed (${res.status}), falling back to data provider`);
       const provider = getDataProvider();
       const properties = await provider.listProperties();
-      return NextResponse.json({ properties });
+      return NextResponse.json({ properties: mapSeedProperties(properties) });
     }
 
     const data = await res.json();
